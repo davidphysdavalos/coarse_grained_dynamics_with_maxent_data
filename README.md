@@ -25,6 +25,28 @@ Scripts to generate the data used in our paper:
 
 > **Note**: If `init.m` does not exist, create the file and the necessary directory path.
 
-## Creating the Data
+## Generating Data Files
 
-To be completed...
+This repository uses a `makefile` to automate the generation of the `.csv` data files from their corresponding Wolfram scripts (`.wls`).
+
+### How to Use
+
+To generate the data for a specific figure, run the `make` command followed by the name of the `.csv` file you want to create.
+
+For example, to generate the data for Figure 1, run the following command in your terminal:
+
+```bash
+make fig_1_decay_data.csv
+```
+This will execute the necessary script (`swap_decay_rate.wls`) to produce the `fig_1_decay_data.csv` file.
+
+The `make` command is efficient. It will only run the script if the data file doesn't exist.
+
+### Generating Other Files
+The process works in an analogous manner for all other data files. Simply replace the target with the filename you need. For example:
+
+- `make fig_1_inset.csv`
+
+- `make fig_2_and_3_evol_data.csv`
+
+- `make fig_4_ising_data.csv`
