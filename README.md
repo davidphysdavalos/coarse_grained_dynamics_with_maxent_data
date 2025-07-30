@@ -16,6 +16,7 @@ Scripts to generate the data used in our paper:
     ```bash
     git clone https://github.com/carlospgmat03/libs ~/libs
     ```
+    or if you prefer, download the specific [v3.1.0](https://github.com/carlospgmat03/libs/releases/tag/v3.1.0) version.
 
 2. Add the following line to your `~/.Wolfram/Kernel/init.m` file:
 
