@@ -7,7 +7,7 @@ Scripts to generate the data used in our paper:
 
 - `make`
 - Wolfram Mathematica version 14 or later
-- Our custom toolbox [`LIBS`](https://github.com/carlospgmat03/libs)
+- Our custom toolbox [`LIBS`](https://github.com/carlospgmat03/libs) (at least version [v3.1.0](https://github.com/carlospgmat03/libs/releases/tag/v3.1.0))
 
 ## Installation on Linux-based Systems
 
