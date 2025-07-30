@@ -3,6 +3,8 @@
 Scripts to generate the data used in our paper:  
 **_Coarse-grained dynamics in quantum many-body systems using the maximum entropy principle_**
 
+[![DOI](https://zenodo.org/badge/1028082909.svg)](https://doi.org/10.5281/zenodo.16618926)
+
 ## Requirements
 
 - `make`
