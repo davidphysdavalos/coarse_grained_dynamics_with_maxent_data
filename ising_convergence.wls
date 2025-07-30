@@ -17,7 +17,7 @@ coarsegrainingoptimized[state_,distro_]:=PartialTrace[Sum[distro[[i]]Proyector[A
 HamiltonianClosedChain2[n_,g_]:=- Sum[Pauli1[i,3,n] . Pauli1[Mod[i+1,n],3,n],{i,0,n-1}]+g Sum[Pauli1[i,1,n],{i,0,n-1}];
 
 
-number=6;times={0.1,0.5,1.0,1.2,1.5};gs={0.1,0.5,1.0,1.5};
+number=10;times={0.1,0.5,1.0,1.2,1.5};gs={0.1,0.5,1.0,1.5};
 Table[distros[n]=DistribucionUniforme[n],{n,4,number}];
 
 
