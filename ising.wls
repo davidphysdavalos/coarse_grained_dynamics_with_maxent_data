@@ -59,7 +59,7 @@ Hue[avgPol,1,brightness]],{i,Length[facesIndices]}];
 coloredSphere=GraphicsComplex[vertices,Table[{EdgeForm[None],faceSphericalColors[[i]],Polygon[facesIndices[[i]]]},{i,Length[facesIndices]}]];
 
 Table[tablag[g]=Table[
-DeformationObject=DeformationFunction[distro,EvolutionTime,NumeroParticulas,g];{TransformSphere[coloredSphere,DeformationObject],wires[NumeroParticulas,g,EvolutionTime,\[Phi]step,wireresolution]}
+DeformationObject=DeformationFunction[distro,EvolutionTime,NumeroParticulas,g];{TransformSphere[coloredSphere,DeformationObject]}
 ,{EvolutionTime,{0.3,0.5,0.7,0.9}}];
 ,{g,gs}];
 
@@ -70,5 +70,5 @@ dataWithHeader=Prepend[data,{"g","i","value"}];
 
 
 (*Export to CSV*)
-Export[Directory[]<>"fig_4_ising_data.csv",dataWithHeader]
+Export[Directory[]<>"/fig_4_ising_data.csv",dataWithHeader]
 
