@@ -4,5 +4,7 @@ fig_1_inset.csv ::
 	wolframscript -file swap_coefficient.wls
 fig_2_and_3_evol_data.csv :: 
 	wolframscript -file effective_evolution.wls
-fig_4_plot.pdf ::
-	wolframscript -file ising_plot.wls
+fig_4_ising_data.csv :: 
+	wolframscript -file ising.wls
+fig_5_convergence.csv ::
+	wolframscript -file ising_convergence.wls
