@@ -7,6 +7,4 @@ fig_2_and_3_evol_data.csv ::
 fig_4_ising_data.csv :: 
 	wolframscript -file ising.wls
 fig_5_convergence.csv ::
-	wolframscript -file ising_convergence.wls #Also generates the inset
-fig_5_inset_convergence.csv ::
-	wolframscript -file ising_convergence.wls #This calls the script above too
+	wolframscript -file ising_convergence.wls

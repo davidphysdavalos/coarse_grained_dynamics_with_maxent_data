@@ -37,3 +37,5 @@ The process works in an analogous manner for all other data files (check makefil
 - `make fig_2_and_3_evol_data.csv`
 
 - `make fig_4_ising_data.csv`
+
+__Note:__ `make fig_5_convergence.csv` also produces `fig_5_inset_convergence.csv`.
