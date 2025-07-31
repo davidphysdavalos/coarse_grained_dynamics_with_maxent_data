@@ -1,9 +1,10 @@
 (* ::Package:: *)
 
 BeginPackage["ThesisTools`"]
-Needs["CoolTools`"]
-Needs["Carlos`"]
-Needs["Quantum`"]
+Import[Directory[]<>"/CoolTools.m"];
+Import[Directory[]<>"/Carlos.m"];
+Import[Directory[]<>"/Quantum.m"];
+
 CNOT::usage="CNOT[t] evaluates the controlled not gate at a time t."
 MatrixToLatex::usage="something"
 ShowOperatorsWithSphere::usage="something"

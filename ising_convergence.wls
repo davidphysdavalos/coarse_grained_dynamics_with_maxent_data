@@ -1,11 +1,8 @@
 #!/usr/bin/env wolframscript
 (* ::Package:: *)
 
-Needs["Carlos`"]
-Needs["Quantum`"]
-Needs["SpinChain`"]
-Needs["TheoreticalRMT`"]
-Needs["Quantum2`"]
+Import[Directory[]<>"/Carlos.m"];
+Import[Directory[]<>"/Quantum.m"];
 
 Print["This script generates files fig_5_convergence.csv and fig_5_inset_convergence.csv in the same folder."];
 Print["They correspond to figure 5 and its inset, respectively."];

@@ -1,10 +1,10 @@
 #!/usr/bin/env wolframscript
 (* ::Package:: *)
 
-Needs["Carlos`"]
-Needs["Quantum`"]
-Needs["CoolTools`"]
-Needs["ThesisTools`"]
+Import[Directory[]<>"/CoolTools.m"];
+Import[Directory[]<>"/Carlos.m"];
+Import[Directory[]<>"/Quantum.m"];
+Import[Directory[]<>"/ThesisTools.wl"];
 
 Print["This script generates file fig_1_decay_data.csv in this folder \
 for specific values of p and r."];

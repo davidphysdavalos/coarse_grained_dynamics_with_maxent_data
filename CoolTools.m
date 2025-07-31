@@ -1,8 +1,8 @@
 (* ::Package:: *)
 
 BeginPackage["CoolTools`"]
-Needs["Carlos`"]
-Needs["Quantum`"]
+Import["Carlos.m"]
+Import["Quantum.m"]
 GetDataBruto::usage="Get pure states whos image is a given target state, polarized in the
 z direction GetDataBruto[{SwapProbability_, MaxError_, SampleSize_, rz_}]"
 randomKets::usage ="randomKets[dim,m] returns a list of m random kets of dimension 'dim'. The ket components are generated with the standard normal distribution."

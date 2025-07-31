@@ -1,11 +1,8 @@
 #!/usr/bin/env wolframscript
 (* ::Package:: *)
 
-Needs["Carlos`"]
-Needs["Quantum`"]
-Needs["SpinChain`"]
-Needs["TheoreticalRMT`"]
-Needs["Quantum2`"]
+
+Import[Directory[]<>"/Quantum.m"]
 
 Print["This script generates file fig_4_ising_data.csv in this folder for 4 particles. If you want more particles just modify the NumeroParticulas variable."];
 Print["It contains data ready to plot with ListSurfacePlot3D."];
