@@ -46,7 +46,7 @@ This will execute the necessary script (`swap_decay_rate.wls`) to produce the `f
 The `make` command is efficient. It will only run the script if the data file doesn't exist.
 
 ### Generating Other Files
-The process works in an analogous manner for all other data files. Simply replace the target with the filename you need. For example:
+The process works in an analogous manner for all other data files (check makefile). Simply replace the target with the filename you need. For example:
 
 - `make fig_1_inset.csv`
 
