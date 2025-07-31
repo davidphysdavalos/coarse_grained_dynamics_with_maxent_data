@@ -1,5 +1,5 @@
 #!/usr/bin/env wolframscript
-(* ::Package:: *)
+(*::Package::*)
 
 Print["This script generates data for figures 2 and 3. Figure 2 \
 corresponds to J=0.0 and figure 3 corresponds to J=1.0. They can be \
