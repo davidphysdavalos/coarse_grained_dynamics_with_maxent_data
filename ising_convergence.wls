@@ -25,18 +25,16 @@ Table[U[time,particles,g]=MatrixExp[-I*Ham[particles,g]*time],{time,times},{part
 Table[state=RandomState[2];Table[total=KroneckerProduct@@Table[state,{particles}]//Flatten;Table[final=U[time,particles,g] . total;finalcg[time,particles,g, i]=coarsegrainingoptimized[final,distros[particles]]//Chop,{time,times},{g,gs}],{particles,4,number}],{i,100}];
 
 
-taberror=Table[Table[{particles+1,Mean[Table[TraceDistance[finalcg[time,particles,g,i],finalcg[time,particles+1,g,i]],{time,times},{i,100}]//Flatten]},{particles,4,number-1}],
+taberror=Table[{g,Table[{particles+1,Mean[Table[TraceDistance[finalcg[time,particles,g,i],finalcg[time,particles+1,g,i]],{time,times},{i,100}]//Flatten]},{particles,4,number-1}]},
 {g,gs}];
 
 
-taberrorinset=Table[Table[{particles,Mean[Table[TraceDistance[finalcg[time,particles,g,i],finalcg[time,8,g,i]],{time,times},{i,100}]//Flatten]},{particles,9,number}],
+taberrorinset=Table[{g,Table[{particles,Mean[Table[TraceDistance[finalcg[time,particles,g,i],finalcg[time,8,g,i]],{time,times},{i,100}]//Flatten]},{particles,9,number}]},
 {g,gs}];
 
 
-datataberror=Flatten[taberror];
-datataberrorwithHeader=Prepend[datataberror,{"particles+1", "value"}];
-Export[Directory[]<>"/fig_5_convergence.csv",datataberrorwithHeader];
+dataWithHeader=Prepend[taberror,{"g","curve"}];
+Export[Directory[]<>"/fig_5_convergence.csv", dataWithHeader, "CSV"];
 
-datataberrorinset=Flatten[taberrorinset];
-datataberrorwithHeaderinset=Prepend[datataberrorinset,{"particles+1", "value"}];
-Export[Directory[]<>"/fig_5_inset_convergence.csv",datataberrorwithHeaderinset];
+dataWithHeaderinset=Prepend[taberrorinset,{"g","curve"}];
+Export[Directory[]<>"/fig_5_inset_convergence.csv", dataWithHeaderinset, "CSV"]
