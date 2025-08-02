@@ -20,22 +20,24 @@ This repository uses a `makefile` to automate the generation of `.csv` data file
 
 ### How to Use
 
-To generate the data for a specific figure, run the `make` command followed by the name of the `.csv` file you want to create.
+To generate the data for a specific figure, run the make command followed by the figure target (e.g., `fig1`, `fig2`, etc.)
 
 For example, to generate the data for Figure 1, run the following command in your terminal:
 
 ```bash
-make fig_1_decay_data.csv
+make fig1
 ```
-This will execute the necessary script (`swap_decay_rate.wls`) to produce the `fig_1_decay_data.csv` file.
+This will execute the necessary scripts (`swap_decay_rate.wls` and `swap_coefficient.wls`) to produce the `fig_1_decay_data.csv` and `fig_1_inset.csv` files.
 
-### Generating Other Files
+### Generating Specific Data Files
 The process works in an analogous manner for all other data files (check makefile). Simply replace the target with the filename you need. For example:
 
 - `make fig_1_inset.csv`
 
-- `make fig_2_and_3_evol_data.csv`
+- `make fig_2_data.csv`
+
+- `make fig_3_data.csv`
 
 - `make fig_4_ising_data.csv`
 
-__Note:__ `make fig_5_convergence.csv` also produces `fig_5_inset_convergence.csv`.
+__Note:__ `make fig_5_convergence.csv` is equivalent to `make fig5` and also produces `fig_5_inset_convergence.csv`.
