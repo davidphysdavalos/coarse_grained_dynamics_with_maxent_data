@@ -1,14 +1,16 @@
 #!/usr/bin/env wolframscript
 (*::Package::*)
 
-Print["This script generates data for figures 2 and 3. Figure 2 \
-corresponds to J=0.0 and figure 3 corresponds to J=1.0. They can be \
+Print["Generating data. They can be \
 plotted using ListLinePlot."]
 
+args = $ScriptCommandLine;
+n = ToExpression[args[[2]]];
+J = ToExpression[args[[3]]];
+label = args[[4]];
+
 (* ========Parameters========*)
-n = 10;
 p1 = 0.5;
-J = 1.;
 \[Mu] = 1.5;
 \[Sigma] = 0.2;
 tc = 2*Pi/\[Sigma];
@@ -60,4 +62,5 @@ timeValues = N[Range[0, tf, dt]];
 csvData = MapThread[Prepend, {data, timeValues}];
 header = {"t", "x", "y"};
 finalData = Prepend[csvData, header];
-Export[Directory[] <> "/fig_2_and_3_evol_data.csv", finalData];
+Export[Directory[] <> label <> "_data.csv", finalData];
+Print["Data generated and exported to"<>Directory[] <> label <> "_data.csv"]
