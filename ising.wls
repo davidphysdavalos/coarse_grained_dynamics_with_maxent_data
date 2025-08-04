@@ -1,12 +1,11 @@
 #!/usr/bin/env wolframscript
 (* ::Package:: *)
 
-
 Import[Directory[]<>"/Quantum.m"]
 
 Print["This script generates file fig_4_ising_data.csv in this folder for 4 particles. If you want more particles just modify the NumeroParticulas variable."];
 Print["It contains data ready to plot with ListSurfacePlot3D."];
-Print["Consider that this is not exactly the method used to create fig 5."];
+Print["Consider that this is not exactly the method used to create fig 4 in our paper."];
 
 NumeroParticulas = 4;
 
