@@ -32,12 +32,7 @@ This will execute the necessary scripts (`swap_decay_rate.wls` and `swap_coeffic
 ### Generating Specific Data Files
 The process works in an analogous manner for all other data files (check makefile). Simply replace the target with the filename you need. For example:
 
-- `make fig_1_inset.csv`
+- `make fig_1_inset.csv` or `make fig1`.
+A command similar works for all other figures, for example `make fig2`, etc.
 
-- `make fig_2_data.csv`
-
-- `make fig_3_data.csv`
-
-- `make fig_4_ising_data.csv`
-
-__Note:__ `make fig_5_convergence.csv` is equivalent to `make fig5` and also produces `fig_5_inset_convergence.csv`.
+__Note:__ `make fig_5_convergence.csv`, which is equivalent to `make fig5`, also produces `fig_5_inset_convergence.csv`.
